@@ -8,4 +8,5 @@ def index(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    return HttpResponse("rango says here is your about page!")
+    context_dict = {'boldmessage': 'this project was made by Kai Hasse'}
+    return render(request, 'rango/about.html', context=context_dict)
